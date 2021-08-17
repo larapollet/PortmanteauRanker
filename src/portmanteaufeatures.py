@@ -1,5 +1,4 @@
 import re
-from gensim.models import KeyedVectors
 from nltk.corpus import wordnet
 from nltk.corpus import brown
 import json
@@ -125,7 +124,7 @@ def pronouncability(word):
 
 
 
-def read_data(woorden, getal):
+def read_data(words):
     data = {}
     j = 0
     data['learning'] = []
@@ -191,8 +190,8 @@ def read_data(woorden, getal):
 
 
 def main():
-    woorden = set(wordnet.words())
-    read_data(woorden,9)
+    words = set(wordnet.words())
+    read_data(words)
 
 
 if __name__ == '__main__':
